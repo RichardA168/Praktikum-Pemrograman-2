@@ -99,6 +99,6 @@ public class Negara {
             System.out.print("\n");
             return;
         }
-        System.out.print("Deklarasi Kemerdekaan pada Tanggal "+this.tglMerdeka+" "+this.getStringBlnMerdeka()+" "+this.thnMerdeka);
+        System.out.print("Deklarasi Kemerdekaan pada Tanggal "+this.tglMerdeka+" "+this.getStringBlnMerdeka()+" "+this.thnMerdeka+"/n/n");
     }
 }
