@@ -1,17 +1,38 @@
-package PRAK202_2110817310016_RichardAlexander;
+package praktikum3.soal2;
+
+import java.util.Scanner;
+import java.util.LinkedList;
 
 public class Soal2Main {
-    public static void main(String[] args) {
-        
-    Mobil mobil1 = new Mobil();
-    mobil1.merek = "Toyota Raize";
-    mobil1.tahun_keluaran = "2021";
-    mobil1.kapasitas = 988;
-    mobil1.harga = 202700000;
-    mobil1.info();
-    mobil1.setPemilik("Kasel");
+    static Scanner forPerson=new Scanner(System.in);
     
-    System.out.println("Pemilik Mobil: " + mobil1.getPemilik());
-    System.out.println("Pajak Mobil: Rp. " + mobil1.getPajak() );
+    public static Negara isiNegara(){
+        String namaNegara, jenisNegara, namaPemimpin;
+        int tglMerdeka, blnMerdeka, thnMerdeka;
+        namaNegara=forPerson.nextLine();
+        jenisNegara=forPerson.nextLine();
+        namaPemimpin=forPerson.nextLine();
+        if(Negara.negaraMonarki(jenisNegara)){
+            return new Negara(namaNegara, jenisNegara, namaPemimpin);
+        }
+        tglMerdeka=forPerson.nextInt(); forPerson.nextLine();
+        blnMerdeka=forPerson.nextInt(); forPerson.nextLine();
+        thnMerdeka=forPerson.nextInt(); forPerson.nextLine();
+        return new Negara(namaNegara, jenisNegara, namaPemimpin, tglMerdeka, blnMerdeka, thnMerdeka);
+    }
+    
+    
+    public static void main(String[] args) {
+        LinkedList<Negara> allNegara=new LinkedList<>();
+        int jumlahNegara;
+        jumlahNegara=forPerson.nextInt();
+        forPerson.nextLine();
+        for(int i=0;i<jumlahNegara;i++){
+            allNegara.add(isiNegara());
+        }
+        while(!allNegara.isEmpty()){
+            allNegara.poll().displayStatus();
+        }
+        forPerson.close();
     }
 }
