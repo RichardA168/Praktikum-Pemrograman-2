@@ -33,6 +33,6 @@ public class Buku {
     }
     
     public void display() {
-        System.out.print("\nDetail buku: \nJudul adalah "+getJudul()+"\nPenulis adalah "+getPenulis()+"\nTahun Terbit adalah "+getTahun()+"\n\n");
+        System.out.print("\nDetail buku: \nJudul adalah "+getJudul()+"\nPenulis adalah "+getPenulis()+"\nTahun Terbit adalah "+getTahun()+"\n");
     }
 }
