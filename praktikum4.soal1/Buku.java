@@ -11,7 +11,28 @@ public class Buku {
         tahun = t;
     }
     
+    public void setJudul(String judul){
+        this.judul = judul;
+    }
+    public String getJudul(){
+        return judul;
+    }
+    
+    public void setPenulis(String penulis){
+        this.penulis = penulis;
+    }
+    public String getPenulis(){
+        return penulis;
+    }
+    
+    public void setTahun(int tahun){
+        this.tahun = tahun;
+    }
+    public int getTahun(){
+        return tahun;
+    }
+    
     public void display() {
-        System.out.print("\nDetail buku: \nJudul adalah "+judul+"\nPenulis adalah "+penulis+"\nTahun Terbit adalah "+tahun+"\n\n");
+        System.out.print("\nDetail buku: \nJudul adalah "+getJudul+"\nPenulis adalah "+getPenulis+"\nTahun Terbit adalah "+getTahun+"\n\n");
     }
 }
