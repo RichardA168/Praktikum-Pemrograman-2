@@ -10,6 +10,14 @@ public class Sphere extends Shape{
         radius = r;
     }
     
+    public double getRadius(){
+        return radius;
+    }
+    
+    public void setRadius(double r){
+        radius = r;
+    }
+    
     //----- Returns the surface area of the sphere -----
     
     public double area(){
